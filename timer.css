@@ -1,0 +1,57 @@
+#main{
+    
+    width: 500px;
+    align-items: center;
+    margin-top: 80px ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    border: 1px solid black;
+    padding: 20px;
+    height: 300px;
+    text-align: center;
+}
+#timer{
+           /* Makes body a flexbox container */
+   width: 20%;     
+    border: 5px solid black;  /* Makes body take full viewport height */
+    margin: auto; 
+    padding: 10px;
+    text-align: center;
+}
+#display{
+    
+    
+    border: 1px solid black;
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+#pagetheme{
+    background-color: black;
+    color: white;
+    float: right;
+}
+#goals{
+    width: 20%;
+   
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.btn{
+    background-color: grey;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#addgoals{
+    float:right;
+}
+#goalin{
+    visibility: visible;
+}
