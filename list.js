@@ -1,54 +1,24 @@
-let list = [];
-let ab = "candy";
-list.push(ab);
-list.push("cane");
+// Updated list.js to fix item addition functionality
 
-// Function to create a new list item with checkbox
-function createListItem(text, index) {
-    const ul = document.querySelector('ul');
-    const li = document.createElement('li');
-    li.id = `l${index}`;
-    
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.id = `c${index}`;
-    
-    const textSpan = document.createElement('span');
-    textSpan.textContent = text;
-    
-    li.appendChild(checkbox);
-    li.appendChild(textSpan);
-    ul.appendChild(li);
+// Function to handle form submission
+document.getElementById('itemForm').onsubmit = function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+    const itemInput = document.getElementById('itemInput');
+    const itemValue = itemInput.value.trim();
+    if (!itemValue) {
+        alert('Please enter a valid item.');
+        return;
+    }
+    addItemToList(itemValue);
+    itemInput.value = ''; // Clear the input field
+};
+
+// Function to add item to the list
+function addItemToList(item) {
+    const itemList = document.getElementById('itemList');
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `<input type='checkbox'/> ${item}`;
+    itemList.appendChild(listItem);
 }
 
-// Function to add new items to the list
-function addItem(text) {
-    list.push(text);
-    createListItem(text, list.length - 1);
-}
-
-// Function to display all items in the list
-function displayAllItems() {
-    const ul = document.querySelector('ul');
-    ul.innerHTML = ''; // Clear existing items
-    
-    list.forEach((item, index) => {
-        createListItem(item, index);
-    });
-}
-
-// Initialize the display when the page loads
-document.addEventListener('DOMContentLoaded', function() {
-    displayAllItems();
-});
-function getAndUseText(event){
-    event.preventDefault();
-    const inputEl=document.getElementById("task");
-    const inputTxt=inputEl.value;
-    addItem(inputTxt);
-    inputEl.value='';
-}
-
-// Example: Add a new item (you can call this function to add more items)
-// addItem("new task");
-addItem("some task")
+// Other initialization code here...
