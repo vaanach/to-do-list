@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     displayAllItems();
 });
 function getAndUseText(){
-    const inputEl=documenet.getElementById("task");
+    const inputEl=document.getElementById("task");
     const inputTxt=inputEl.value;
     addItem(inputTxt);
 }
