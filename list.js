@@ -41,10 +41,12 @@ function displayAllItems() {
 document.addEventListener('DOMContentLoaded', function() {
     displayAllItems();
 });
-function getAndUseText(){
+function getAndUseText(event){
+    event.preventDefault();
     const inputEl=document.getElementById("task");
     const inputTxt=inputEl.value;
     addItem(inputTxt);
+    inputEl.value='';
 }
 
 // Example: Add a new item (you can call this function to add more items)
