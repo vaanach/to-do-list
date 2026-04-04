@@ -4,9 +4,6 @@ list.push(ab);
 list.push("cane");
 
 // Function to create a new list item with checkbox
-
-    
-}
 function createListItem(text, index) {
     const ul = document.querySelector('ul');
     const li = document.createElement('li');
