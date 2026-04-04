@@ -4,6 +4,9 @@ list.push(ab);
 list.push("cane");
 
 // Function to create a new list item with checkbox
+
+    
+}
 function createListItem(text, index) {
     const ul = document.querySelector('ul');
     const li = document.createElement('li');
@@ -41,6 +44,11 @@ function displayAllItems() {
 document.addEventListener('DOMContentLoaded', function() {
     displayAllItems();
 });
+function getAndUseText(){
+    const inputEl=documenet.getElementById("task");
+    const inputTxt=inputEl.value;
+    addItem(inputTxt);
+}
 
 // Example: Add a new item (you can call this function to add more items)
 // addItem("new task");
