@@ -17,22 +17,28 @@ document.getElementById('itemForm').onsubmit = function getAndUseText(event) {
 function addItemToList(item) {
     const itemList = document.getElementById('itemList');
     const listItem = document.createElement('li');
-    listItem.innerHTML = `<input id="box" type='checkbox'/> <label for="box">${item}</label>`;
-    itemList.appendChild(listItem);
-}
-
-    // take the item of checked box
-    // change its css text-decor to line-through
+    const checkboxId='box-${Date.now()';
+    const checkbox=document.createElement('input');
+    checkbox.type='checkbox';
+    checkbox.id=checkboxId;
+    checkbox.className='box';
+    const label=document.createElement('label');
+    label.htmlFor=checkboxId;
+    label.textContent=item;
     
-//add a line through effect from css text-decoration if a box has been check
-const checkbox=document.getElementById("box");
+    
 checkbox.addEventListener('change', function(){
     if (this.checked) {
-    const label = document.querySelector(`label[for="${this.id}"]`);
-    label.style.text-decoration="line-through";
-  }
-        // add function to strike out text
-
+    
+    label.style.textDecoration="line-through";
+  }else {
+        label.style.textDecoration="none";
+}
 });
+    listItem.appendChild(checkbox);
+    listItem.appendChild(label);
+    itemList.appendChild(listItem);
+}
+    
 
 // Other initialization code here...
