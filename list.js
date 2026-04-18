@@ -17,7 +17,7 @@ document.getElementById('itemForm').onsubmit = function getAndUseText(event) {
 function addItemToList(item) {
     const itemList = document.getElementById('itemList');
     const listItem = document.createElement('li');
-    const checkboxId='box-${Date.now()';
+    const checkboxId=`box-${Date.now()}`;
     const checkbox=document.createElement('input');
     checkbox.type='checkbox';
     checkbox.id=checkboxId;
