@@ -20,7 +20,7 @@ function addItemToList(item) {
     listItem.innerHTML = `<input id="box" type='checkbox'/> <label for="box">${item}</label>`;
     itemList.appendChild(listItem);
 }
-function strikeThrough(item){
+
     // take the item of checked box
     // change its css text-decor to line-through
     
