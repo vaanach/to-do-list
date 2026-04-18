@@ -3,7 +3,7 @@
 // Function to handle form submission
 document.getElementById('itemForm').onsubmit = function(event) {
     event.preventDefault(); // Prevent default form submission behavior
-    const itemInput = document.getElementById('itemInput');
+    const itemInput = document.getElementById('task');
     const itemValue = itemInput.value.trim();
     if (!itemValue) {
         alert('Please enter a valid item.');
