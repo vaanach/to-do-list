@@ -28,7 +28,7 @@ document.getElementById('itemForm').onsubmit = function (event) {
     }
     const rb=document.getElementById('removeButton');
     if(rb){
-        if (itemList.children.length === 0){
+        if (ListItem.children.length === 0){
             rb.remove();
         }
         
