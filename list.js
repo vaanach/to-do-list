@@ -1,6 +1,6 @@
 // Updated list.js to fix item addition functionality
 
-console.log("js is running");
+
 
 // Function to handle form submission
 document.addEventListener('DOMContentLoaded', function() {
@@ -72,12 +72,12 @@ function removeItemFromList(item){
     const rb=document.getElementById('removeButton');
     if (lastItem) {
         lastItem.remove();
-        console.log("Children count:", itemList.children.length);
+        
     }
      if (itemList.children.length === 0){
             if(rb){
             rb.remove();
-                console.log('removed remove')
+               
                 
             }
             
