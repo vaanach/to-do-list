@@ -25,7 +25,7 @@ document.getElementById('itemForm').onsubmit = function (event) {
             removeButtonCreated = true;
     }
     };
-};
+});
 
 // Function to add item to the list
 function addItemToList(item) {
