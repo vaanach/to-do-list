@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let removeButtonCreated=false;
 document.getElementById('itemForm').onsubmit = function (event) {
     event.preventDefault(); // Prevent default form submission behavior
-    
+    const ListItem=document.getElementById('itemList');
     const itemInput = document.getElementById('task');
     const itemValue = itemInput.value.trim();
     if (!itemValue) {
@@ -23,7 +23,12 @@ document.getElementById('itemForm').onsubmit = function (event) {
         removeButton.addEventListener('click', removeItemFromList);
             document.getElementById('itemForm').appendChild(removeButton);
             removeButtonCreated = true;
+        if (itemList.children.length === 0){
+        removeButton.remove();
     }
+    }
+    
+    
     };
 }) 
 
