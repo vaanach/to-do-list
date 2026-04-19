@@ -71,9 +71,13 @@ function removeItemFromList(item){
     if (lastItem) {
         lastItem.remove();
     }
-     if(rb){
+     
         if (itemList.children.length === 0){
+            if(rb){
             rb.remove();
+                console.log('removed remove')
+            }
+            
         }
 }
 
