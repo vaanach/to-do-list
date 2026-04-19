@@ -23,9 +23,7 @@ document.getElementById('itemForm').onsubmit = function (event) {
             document.getElementById('itemForm').appendChild(removeButton);
             removeButtonCreated = true;
     }
-        
-    
-};
+    };
 };
 
 // Function to add item to the list
