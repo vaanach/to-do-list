@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let removeButtonCreated=false;
 document.getElementById('itemForm').onsubmit = function (event) {
     event.preventDefault(); // Prevent default form submission behavior
-    const ListItem=document.getElementById('itemList');
+   
     
     const itemInput = document.getElementById('task');
     const itemValue = itemInput.value.trim();
@@ -26,11 +26,8 @@ document.getElementById('itemForm').onsubmit = function (event) {
             removeButtonCreated = true;
         
     }
-    const rb=document.getElementById('removeButton');
-    if(rb){
-        if (ListItem.children.length === 0){
-            rb.remove();
-        }
+    
+   
         
     }
     
@@ -70,9 +67,14 @@ checkbox.addEventListener('change', function(){
 function removeItemFromList(item){
     const itemList = document.getElementById('itemList');
     const lastItem = itemList.lastElementChild;
+    const rb=document.getElementById('removeButton');
     if (lastItem) {
         lastItem.remove();
     }
+     if(rb){
+        if (itemList.children.length === 0){
+            rb.remove();
+        }
 }
 
 // Other initialization code here...
