@@ -1,7 +1,8 @@
 // Updated list.js to fix item addition functionality
 
 // Function to handle form submission
-document.getElementById('itemForm').onsubmit = function getAndUseText(event) {
+document.addEventListener('DOMContentLoaded', function() {
+document.getElementById('itemForm').onsubmit = function (event) {
     event.preventDefault(); // Prevent default form submission behavior
     const itemInput = document.getElementById('task');
     const itemValue = itemInput.value.trim();
@@ -12,7 +13,7 @@ document.getElementById('itemForm').onsubmit = function getAndUseText(event) {
     addItemToList(itemValue);
     itemInput.value = ''; // Clear the input field
 };
-
+};
 // Function to add item to the list
 function addItemToList(item) {
     const itemList = document.getElementById('itemList');
