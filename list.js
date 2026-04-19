@@ -1,5 +1,6 @@
 // Updated list.js to fix item addition functionality
 
+let removeButtonCreated=False;
 // Function to handle form submission
 document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('itemForm').onsubmit = function (event) {
@@ -13,8 +14,16 @@ document.getElementById('itemForm').onsubmit = function (event) {
     }
     addItemToList(itemValue);
     itemInput.value = ''; // Clear the input field
-    const removeButton=document.createElement('button');
-    removeButton.textContent="remove";
+    if (!removeButtonCreated){
+        const removeButton=document.createElement('button');
+        removeButton.type='button';
+        removeButton.textContent='remove';
+        rremoveButton.id="removeButton";
+        removeButton.addEventListener('click', removeItemFromList);
+            document.getElementById('itemForm').appendChild(removeButton);
+            removeButtonCreated = true;
+    }
+        
     
 };
 };
@@ -49,7 +58,11 @@ checkbox.addEventListener('change', function(){
 // it acts as a undo button it takes the item that was added last
 // it removes its list item
 function removeItemFromList(item){
-    ...
-};
+    const itemList = document.getElementById('itemList');
+    const lastItem = itemList.lastElementChild;
+    if (lastItem) {
+        lastItem.remove();
+    }
+}
 
 // Other initialization code here...
