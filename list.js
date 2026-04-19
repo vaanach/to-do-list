@@ -23,9 +23,10 @@ document.getElementById('itemForm').onsubmit = function (event) {
         removeButton.addEventListener('click', removeItemFromList);
             document.getElementById('itemForm').appendChild(removeButton);
             removeButtonCreated = true;
-        if (itemList.children.length === 0){
-        removeButton.remove();
+        
     }
+    if (itemList.children.length === 0){
+        removeButton.remove();
     }
     
     
