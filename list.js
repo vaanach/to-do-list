@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('itemForm').onsubmit = function (event) {
     event.preventDefault(); // Prevent default form submission behavior
+    
     const itemInput = document.getElementById('task');
     const itemValue = itemInput.value.trim();
     if (!itemValue) {
@@ -12,8 +13,12 @@ document.getElementById('itemForm').onsubmit = function (event) {
     }
     addItemToList(itemValue);
     itemInput.value = ''; // Clear the input field
+    const removeButton=document.createElement('button');
+    removeButton.textContent="remove";
+    
 };
 };
+
 // Function to add item to the list
 function addItemToList(item) {
     const itemList = document.getElementById('itemList');
@@ -40,6 +45,11 @@ checkbox.addEventListener('change', function(){
     listItem.appendChild(label);
     itemList.appendChild(listItem);
 }
-    
+    // function to remove item from the list
+// it acts as a undo button it takes the item that was added last
+// it removes its list item
+function removeItemFromList(item){
+    ...
+};
 
 // Other initialization code here...
