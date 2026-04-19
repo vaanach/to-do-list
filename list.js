@@ -1,6 +1,6 @@
 // Updated list.js to fix item addition functionality
 
-
+console.log("js is running");
 // Function to handle form submission
 document.addEventListener('DOMContentLoaded', function() {
     let removeButtonCreated=false;
