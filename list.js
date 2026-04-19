@@ -1,8 +1,9 @@
 // Updated list.js to fix item addition functionality
 
-let removeButtonCreated=false;
+
 // Function to handle form submission
 document.addEventListener('DOMContentLoaded', function() {
+    let removeButtonCreated=false;
 document.getElementById('itemForm').onsubmit = function (event) {
     event.preventDefault(); // Prevent default form submission behavior
     
