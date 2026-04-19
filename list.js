@@ -1,7 +1,7 @@
 // Updated list.js to fix item addition functionality
 
 console.log("js is running");
-let removeButtonCreated=false;
+
 // Function to handle form submission
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -17,14 +17,14 @@ document.getElementById('itemForm').onsubmit = function (event) {
     }
     addItemToList(itemValue);
     itemInput.value = ''; // Clear the input field
-    if (!removeButtonCreated){
+    if (!document.getElementById('removeButton')){
         const removeButton=document.createElement('button');
         removeButton.type='button';
         removeButton.textContent='remove';
         removeButton.id="removeButton";
         removeButton.addEventListener('click', removeItemFromList);
             document.getElementById('itemForm').appendChild(removeButton);
-            removeButtonCreated = true;
+            
         
     }
     
@@ -77,7 +77,7 @@ function removeItemFromList(item){
             if(rb){
             rb.remove();
                 console.log('removed remove')
-                 removeButtonCreated=true;
+                
             }
             
         }
