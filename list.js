@@ -17,16 +17,7 @@ document.getElementById('itemForm').onsubmit = function (event) {
     }
     addItemToList(itemValue);
     itemInput.value = ''; // Clear the input field
-    if (!document.getElementById('removeButton')){
-        const removeButton=document.createElement('button');
-        removeButton.type='button';
-        removeButton.textContent='remove';
-        removeButton.id="removeButton";
-        removeButton.addEventListener('click', removeItemFromList);
-            document.getElementById('itemForm').appendChild(removeButton);
-            
-        
-    }
+   
     
    
         
@@ -61,6 +52,16 @@ checkbox.addEventListener('change', function(){
     listItem.appendChild(checkbox);
     listItem.appendChild(label);
     itemList.appendChild(listItem);
+     if (!document.getElementById('removeButton')){
+        const removeButton=document.createElement('button');
+        removeButton.type='button';
+        removeButton.textContent='remove';
+        removeButton.id="removeButton";
+        removeButton.addEventListener('click', removeItemFromList);
+            document.getElementById('itemForm').appendChild(removeButton);
+            
+        
+    }
 }
     // function to remove item from the list
 // it acts as a undo button it takes the item that was added last
